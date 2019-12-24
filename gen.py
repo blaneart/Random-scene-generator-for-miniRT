@@ -54,7 +54,11 @@ def ft_gen_cy(f):
     f.write(str(random.randrange(1, 10, 1)))
     ft_random_color(f)
     f.write('\n')
-
+def ft_add_light(f):
+    f.write('l ')
+    ft_random_coor(f)
+    f.write(' ' + str(round(random.uniform(0, 1), 3)))
+    f.write(' ' + '255,255,255\n')
 def ft_write():
     my_list = [ft_gen_cy, ft_gen_pl, ft_gen_sp, ft_gen_sq, ft_gen_tr]
     f = open("i.rt", "w+")
@@ -64,6 +68,8 @@ def ft_write():
     f.write("c 0,0,10 0,0,-1 70\n")
     f.write("c 10,-10,0 0.6,-0.8,0 70\n")
     f.write("c -10,10,0 -0.8,0.6,0 70\n")
+    for i in range(5):
+        ft_add_light(f)
     for i in range(10):
         random.choice(my_list)(f)
     print("done")
