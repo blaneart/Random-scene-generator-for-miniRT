@@ -1,0 +1,1 @@
+# Random-scene-generator-for-miniRT
