@@ -1,14 +1,14 @@
 import random
 
 def ft_random_coor(f):
-    f.write(str(random.randrange(-100,100,1)))
-    f.write(',' + str(random.randrange(-100,100,1)))
-    f.write(',' + str(random.randrange(-100,100,1)) + ' ')
+    f.write(str(random.randrange(-20, 20, 1)))
+    f.write(',' + str(random.randrange(-20, 20, 1)))
+    f.write(',' + str(random.randrange(-20, 20, 1)) + ' ')
 
 def ft_random_color(f):
-    f.write(str(random.randrange(0,255, 1)) + ',')
-    f.write(str(random.randrange(0,255, 1)) + ',')
-    f.write(str(random.randrange(0,255, 1)) + ' ')
+    f.write(str(random.randrange(0, 255, 1)) + ',')
+    f.write(str(random.randrange(0, 255, 1)) + ',')
+    f.write(str(random.randrange(0, 255, 1)) + ' ')
 
 def ft_random_norm(f):
     f.write(str(round(random.uniform(-1, 1), 3)) + ',')
@@ -63,11 +63,13 @@ def ft_write():
     my_list = [ft_gen_cy, ft_gen_pl, ft_gen_sp, ft_gen_sq, ft_gen_tr]
     f = open("i.rt", "w+")
     f.write("R 1800 1200\n")
-    f.write("A 0.2 255,255,255\n")
-    f.write("c 0,0,-10 0,0,1 70\n")
-    f.write("c 0,0,10 0,0,-1 70\n")
-    f.write("c 10,-10,0 0.6,-0.8,0 70\n")
-    f.write("c -10,10,0 -0.8,0.6,0 70\n")
+    f.write("A 0.4 255,255,255\n")
+    f.write("c 0,0,-25 0,0,1 70\n")
+    f.write("c 0,0,25 0,0,-1 70\n")
+    f.write("c 25,0,0 -1,0,0 70\n")
+    f.write("c -25,0,0 1,0,0 70\n")
+    f.write("c 25,25,0 -1,-1,0 70\n")
+    f.write("c -25,-25,0 1,1,0 70\n")
     for i in range(5):
         ft_add_light(f)
     for i in range(10):
